@@ -32,7 +32,7 @@ void print_items(Item *list, int size){
 
     for(int i=0; i<size; i++)
     {
-        auto item = list[i];//Using auto function for compiler to recognize what data type a variable actually is. 
+        Item item = list[i];
         print_item(item);
     }
   
@@ -92,7 +92,7 @@ int main(int argc, char *argv[]){
     {
         if (index < size)
         {
-            auto item = list[index++];
+            Item item = list[index++];
             foundItem = strcmp(item.sku, skuToFind) == 0;//Using strcmp to compare item.sku and the skuToFind variable. 
             //Initializing found variable with bool data type to this comparison to see if it's value is true. 
             //learnt this strategy in https://en.cppreference.com/w/c/string/byte/strcmp 
